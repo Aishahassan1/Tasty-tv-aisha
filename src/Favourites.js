@@ -13,13 +13,19 @@ function Favourites(props) {
             <img className="image" src={favourite.bannerUrl} alt="movie"></img>
           <h3 className="image-name">{favourite.name}</h3>
           <div className="btns">
-            <button style={{background: "red", color: "white"}} type="submit" className="watched-btn">Watched</button>
-          <button type="submit" className="remove-movie-btn" onClick={() => props.removeOneMovie()}>Remove Movie</button>
+            {/* <button style={{background: "red", color: "white"}} type="submit" className="watched-btn">Watched</button> */}
+            <button style={{color: props.favourite.watched ? "green" : "red"}} 
+            onClick={()=>{props.favourite === "red" ? props.watchedMovie("green") : props.setWatchedMovie()
+              }
+            } 
+            type="submit" className="watched-btn">Watched
+            </button>
+
+          <button type="submit" className="remove-movie-btn" onClick={()=>props.removeMovie(favourite)}>Remove Movie</button>
           </div>
           </div>
         })}
         <div className="remove-buttons">
-          <hr/>
         <button className="remove-watched" onClick={()=>props.removeWatchedMovies()}>Remove Watched</button>
         <button className="remove-all" onClick={()=> props.removeAll()}>Remove All</button>
         </div>
