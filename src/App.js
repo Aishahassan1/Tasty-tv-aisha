@@ -8,6 +8,15 @@ import Footer from './Footer';
 
 function App() {
 
+  // const getLocalFavourites =  () => {
+  //   let favourite = localStorage.getItem("favourites")
+  //   if(favourite) {
+  //     return JSON.parse(localStorage.getItem("favourites"))
+  //   } else {
+  //     return []
+  //   }
+  // }
+
   const [favourites, setFavourites] = useState([])
   const [movies, setMovies] = useState([])
   const [removeAMovie, setRemoveAMovie] = useState([])
@@ -39,9 +48,11 @@ function App() {
     // ALL THE ABOVE ARE DONE AND CORRECT //
 
 
-  // function removeWatchedMovies(movie) {
-  //   setRemoveWatch([...removeWatched, movie])
-  // }
+    function removeWatched(movie) {
+      const newFavoutites = favourites.filter((favourites) => favourites.watched === false
+      )
+      setFavourites(newFavoutites)
+    }
  
 useEffect(()=> {
   async function getMovies() {
@@ -52,11 +63,17 @@ useEffect(()=> {
   getMovies()
 }, [])
 
+// useEffect(()=> {
+//   return () => {
+//     localStorage.setItem("favourites", JSON.stringify("favourites"))
+//   }
+// },[favourites])
+
   return (
     <div className="App"> 
       <Header />
       <MovieList movies={movies} addFavourites={addFavourites} />
-      <Favourites favourites={favourites} removeAll={removeAll} removeMovie={removeMovie} changeWatchedColor={changeWatchedColor}/>
+      <Favourites favourites={favourites} removeAll={removeAll} removeMovie={removeMovie} changeWatchedColor={changeWatchedColor} removeWatched={removeWatched}/>
       <Footer />
     </div>
   );

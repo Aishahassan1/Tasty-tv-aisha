@@ -64,7 +64,7 @@ background-color: rgb(11, 11, 180);
     margin: 5px;
     border-radius: 5px;
     display: flex;
-
+    color: white;
   }
 
 /* .App-header {
