@@ -20,10 +20,6 @@ function MovieList(props) {
     );
   }
 
-  // <button onClick={()=>{changeWatchedColor("green")}} style={{background: "red", color: "white"}} type="submit" className="watched-btn">Watched</button>
-  // <button type="submit" className="watched-btn" onClick={()=>props.markWatched(movie)} style={{backcolor: props.markWatched ? "green" : "red"}}>Watched</button>
-
-
 
 
 export default MovieList

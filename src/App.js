@@ -10,8 +10,6 @@ function App() {
 
   const [favourites, setFavourites] = useState([])
   const [movies, setMovies] = useState([])
-  // const [btnColor, setBtnColor] = useState("red")
-  const [watchedMovie, setWatchedMovie] = useState("false")
   const [removeAMovie, setRemoveAMovie] = useState([])
 
 // ALL THE BELOW ARE DONE AND CORRECT //
@@ -28,13 +26,18 @@ function App() {
     )
     setFavourites(newFavoutites)
   }
-  // ALL THE ABOVE ARE DONE AND CORRECT //
 
-  function changeWatched(color) {
-    if(watchedMovie === true) {
-    
-    }
+  function changeWatchedColor(movie) {
+    const newFavourites = favourites.map((item)=> {
+      if(item.name === movie.name) {
+        return {...item, watched: true}
+      } return item
+    })
+    setFavourites(newFavourites)
   }
+
+    // ALL THE ABOVE ARE DONE AND CORRECT //
+
 
   // function removeWatchedMovies(movie) {
   //   setRemoveWatch([...removeWatched, movie])
@@ -53,7 +56,7 @@ useEffect(()=> {
     <div className="App"> 
       <Header />
       <MovieList movies={movies} addFavourites={addFavourites} />
-      <Favourites favourites={favourites} removeAll={removeAll} removeMovie={removeMovie} watchedMovier={watchedMovie}/>
+      <Favourites favourites={favourites} removeAll={removeAll} removeMovie={removeMovie} changeWatchedColor={changeWatchedColor}/>
       <Footer />
     </div>
   );

@@ -13,9 +13,8 @@ function Favourites(props) {
             <img className="image" src={favourite.bannerUrl} alt="movie"></img>
           <h3 className="image-name">{favourite.name}</h3>
           <div className="btns">
-            {/* <button style={{background: "red", color: "white"}} type="submit" className="watched-btn">Watched</button> */}
-            <button style={{color: props.favourite.watched ? "green" : "red"}} 
-            onClick={()=>{props.favourite === "red" ? props.watchedMovie("green") : props.setWatchedMovie()
+            <button style={{background:favourite.watched ? "green" : "red"}} 
+            onClick={()=>{props.changeWatchedColor(favourite)
               }
             } 
             type="submit" className="watched-btn">Watched
