@@ -20,7 +20,6 @@ function App() {
   const [movies, setMovies] = useState([])
   const [removeAMovie, setRemoveAMovie] = useState([])
 
-// ALL THE BELOW ARE DONE AND CORRECT //
   function addFavourites(movie) {
     setFavourites([...favourites, movie])
   }
@@ -68,8 +67,6 @@ useEffect(()=> {
   getMovies()
   getLocalFavourites()
 }, [])
-
-    // ALL THE ABOVE ARE DONE AND CORRECT //
 
 
 useEffect(()=> {
