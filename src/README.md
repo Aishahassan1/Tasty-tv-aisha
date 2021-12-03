@@ -7,6 +7,7 @@
 - Props
 - UseState
 - UseEffect
+- Local Storage
 
 
 # Approach taken 
