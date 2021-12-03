@@ -2,13 +2,15 @@
   text-align: center;
 }
 
-/* .image {
-  padding: 15px;
-} */
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
 
 body {
   background:rgb(236, 225, 225);
-
+  width: 100%;
 }
 
 .header {
@@ -16,34 +18,30 @@ background: #282c34;
 color: white;
 }
 
-div.movies {
+.movies {
   vertical-align: top;
   display: inline-block;
   text-align: center;
-  width: 120px;
+  width: 200px;
 }
+
+.movie-container {
+height: 300px;
+}
+
 .image {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 200px;
   background-color:#282c34;
 }
 
 .remove-watched {
   padding: 5px;
   border-radius: 5px;
-  /* margin: 10px; */
   cursor: pointer;
   background: #282c34;
   color: white;
 }
-/* 
-button.removed-watched:hover {
-background-color: rgb(11, 11, 180);
-}
-
-.removed-all a:hover {
-  background-color: rgb(11, 11, 180);
-  } */
 
 .remove-all {
   padding: 5px;
@@ -56,27 +54,16 @@ background-color: rgb(11, 11, 180);
     background: #282c34;
     color: white;
     border-radius: 5px;
+    cursor: pointer;
   }
 
   .watched-btn {
-    /* background: #770833; */
-    /* color: white; */
     margin: 5px;
     border-radius: 5px;
     display: flex;
     color: white;
+    cursor: pointer;
   }
-
-/* .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-} */
 
 .favourite-components {
   vertical-align: top;
@@ -84,10 +71,17 @@ background-color: rgb(11, 11, 180);
   text-align: center;
   margin: 10px;
 }
-.image {
-  width: 100px;
-  height: 100px;
-  background-color:#282c34;
+
+.favourites {
+  height: 500px;
+}
+
+.my-fave {
+  margin: 60px;
+}
+
+.image-name {
+  margin: 5px;
 }
 
 .remove-movie-btn {
@@ -95,6 +89,11 @@ background-color: rgb(11, 11, 180);
   background: #042f83;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
+}
+
+.recommended-movies {
+  padding: 30px;
 }
 
 .footer {

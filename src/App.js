@@ -45,11 +45,8 @@ function App() {
     setFavourites(newFavourites)
   }
 
-    // ALL THE ABOVE ARE DONE AND CORRECT //
-
-
     function removeWatched(movie) {
-      const newFavoutites = favourites.filter((favourites) => favourites.watched === false
+      const newFavoutites = favourites.filter((favourite) => favourite.watched === false
       )
       setFavourites(newFavoutites)
     }
@@ -62,6 +59,9 @@ useEffect(()=> {
   }
   getMovies()
 }, [])
+
+    // ALL THE ABOVE ARE DONE AND CORRECT //
+
 
 // useEffect(()=> {
 //   return () => {
