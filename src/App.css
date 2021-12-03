@@ -60,6 +60,11 @@ height: 300px;
     margin: 20px;
   }
 
+  .message {
+    color: red;
+    margin: 10px;
+  }
+
   .watched-btn {
     margin: 5px;
     border-radius: 5px;
