@@ -52,7 +52,7 @@ function App() {
     }
 
     function emptyFavourites() {
-      const message = "No Movies Have Been Added to Your Favourites"
+      const message = "No Movies Have Been Added to Your Favourites. Go Ahead and Add Some Now"
       if(favourites.length < 1) {
       return (message)
       } else {
