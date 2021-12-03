@@ -29,8 +29,6 @@ function Favourites(props) {
         <button className="remove-watched" onClick={()=>props.removeWatched()}>Remove Watched</button>
         <button className="remove-all" onClick={()=> props.removeAll()}>Remove All</button>
         </div>
-
-
       </div>
     );
   }
