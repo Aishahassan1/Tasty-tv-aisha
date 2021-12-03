@@ -8,14 +8,13 @@ import Footer from './Footer';
 
 function App() {
 
-  // const getLocalFavourites =  () => {
-  //   let favourite = localStorage.getItem("favourites")
-  //   if(favourite) {
-  //     return JSON.parse(localStorage.getItem("favourites"))
-  //   } else {
-  //     return []
-  //   }
-  // }
+  const getLocalFavourites =  () => {
+    let favourite = localStorage.getItem("favourites")
+    if(favourite) {
+      setFavourites(JSON.parse(localStorage.getItem("favourites")))
+    } 
+     
+  }
 
   const [favourites, setFavourites] = useState([])
   const [movies, setMovies] = useState([])
@@ -67,16 +66,17 @@ useEffect(()=> {
     setMovies(movie)
   }
   getMovies()
+  getLocalFavourites()
 }, [])
 
     // ALL THE ABOVE ARE DONE AND CORRECT //
 
 
-// useEffect(()=> {
-//   return () => {
-//     localStorage.setItem("favourites", JSON.stringify("favourites"))
-//   }
-// },[favourites])
+useEffect(()=> {
+  return () => {
+    localStorage.setItem("favourites", JSON.stringify(favourites))
+  }
+},[favourites])
 
   return (
     <div className="App"> 
