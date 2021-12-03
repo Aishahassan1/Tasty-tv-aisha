@@ -25,8 +25,9 @@ cd into tastytv-app and then run npm start
 
 I then cleaned up the files and deleted anything that I did not need for my project.
 
-
 # Unsolved problems
+
+I haven't quite solved why my local stoarage doesn't keep the favourited movies in the browsers memory 
 
 # Documentation assets
 
