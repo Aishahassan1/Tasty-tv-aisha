@@ -1,8 +1,13 @@
 # Technologies used
 
-- Use State
-- Props
+- React
 - JSX
+- CSS
+- JavaScript
+- Props
+- UseState
+- UseEffect
+
 
 # Approach taken 
 
