@@ -8,6 +8,7 @@ function Favourites(props) {
     
       <div className="favourites">
         <h2 className="my-fave">My Favourites</h2>
+        <h3 class="message">{props.emptyFavourites()}</h3>
         {props.favourites.map((favourite) => {
           return <div className="favourite-components">
             <img className="image" src={favourite.bannerUrl} alt="movie"></img>

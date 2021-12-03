@@ -50,6 +50,15 @@ function App() {
       )
       setFavourites(newFavoutites)
     }
+
+    function emptyFavourites() {
+      const message = "No Movies Have Been Added to Your Favourites"
+      if(favourites.length < 1) {
+      return (message)
+      } else {
+        return setFavourites
+      }
+      }
  
 useEffect(()=> {
   async function getMovies() {
@@ -73,7 +82,7 @@ useEffect(()=> {
     <div className="App"> 
       <Header />
       <MovieList movies={movies} addFavourites={addFavourites} />
-      <Favourites favourites={favourites} removeAll={removeAll} removeMovie={removeMovie} changeWatchedColor={changeWatchedColor} removeWatched={removeWatched}/>
+      <Favourites favourites={favourites} removeAll={removeAll} removeMovie={removeMovie} changeWatchedColor={changeWatchedColor} removeWatched={removeWatched} emptyFavourites={emptyFavourites}/>
       <Footer />
     </div>
   );
