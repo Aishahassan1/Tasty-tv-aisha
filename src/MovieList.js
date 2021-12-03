@@ -12,6 +12,7 @@ function MovieList(props) {
          return <div className="movies"> 
          <img className="image" src={movie.bannerUrl} alt="movie"></img>
           <h3 className="image-name">{movie.name}</h3>
+          <h4>Released: {movie.releasedOn}</h4>
           <button type="submit" className="fave-btn" onClick={()=> props.addFavourites(movie)}>Add to Fave</button>
         </div>
         })}

@@ -57,6 +57,7 @@ height: 300px;
     color: white;
     border-radius: 5px;
     cursor: pointer;
+    margin: 20px;
   }
 
   .watched-btn {
@@ -79,7 +80,8 @@ height: 300px;
 }
 
 .my-fave {
-  margin: 60px;
+  margin-top: 150px;
+  margin-bottom: 50px;
 }
 
 .image-name {
